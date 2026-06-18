@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom scroll smooth and styling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+    filter: blur(40px);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1);
+    filter: blur(60px);
+  }
+}
+
+.custom-glow-1 {
+  animation: pulseGlow 15s infinite ease-in-out;
+}
+
+.custom-glow-2 {
+  animation: pulseGlow 20s infinite ease-in-out -5s;
+}
+
+/* Accessibility high-contrast focus rings */
+*:focus-visible {
+  outline: 3px solid var(--color-teal-400);
+  outline-offset: 2px;
+}
